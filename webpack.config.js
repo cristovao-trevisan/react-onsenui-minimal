@@ -1,3 +1,13 @@
+/*
+  Environment varibles:
+    - CORDOVA: if it exists a script tag including cordova.js will be added to the index.html file-loader
+    - NODE_ENV:
+      -> production: activate optimizations (takes a lot of time)
+      -> development: no optimizations
+
+  Babel options: in the .babelrc file
+*/
+
 'use strict'
 const path = require('path')
 const webpack = require('webpack')
@@ -51,8 +61,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: [{
-          loader: 'babel-loader',
-          options: { presets: ['es2015', 'stage-0', 'stage-2', 'react'] }
+          loader: 'babel-loader'
         }]
       },
       {

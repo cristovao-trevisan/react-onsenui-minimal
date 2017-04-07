@@ -11,11 +11,11 @@ import 'onsenui'
 require('onsenui/css/onsenui.css')
 require('onsenui/css/onsen-css-components.css')
 
-/* CORDOVA ONLY
+/* CORDOVA ONLY (uncomment  this)
 document.addEventListener('deviceready', ()=>{
-  // Cordova sensitive stuff
+  // Cordova sensitive stuff (like plugin usage)
 })
-// fake deviceready call when using preview
+// fake deviceready call when using preview (chrome/firefox)
 if(!window.device){
   window.setTimeout(function() {
     var e = document.createEvent('Events')
