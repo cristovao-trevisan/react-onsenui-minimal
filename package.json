@@ -5,8 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "transpile": "NODE_ENV=production webpack",
-    "cordova-transpile": "NODE_ENV=production CORDOVA=T npm run transpile",
-    "android": "NODE_ENV=development CORDOVA=T npm run transpile && cordova run android",
+    "cordova-transpile": "NODE_ENV=production CORDOVA=T webpack",
+    "android": "NODE_ENV=development CORDOVA=T webpack && cordova run android",
     "preview": "NODE_ENV=development webpack-dev-server",
     "test": "standard && jest"
   },
