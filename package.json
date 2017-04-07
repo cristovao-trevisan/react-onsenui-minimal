@@ -8,7 +8,7 @@
     "cordova-transpile": "NODE_ENV=production CORDOVA=T npm run transpile",
     "android": "NODE_ENV=development CORDOVA=T npm run transpile && cordova run android",
     "preview": "NODE_ENV=development webpack-dev-server",
-    "test": "jest"
+    "test": "standard && jest"
   },
   "repository": {
     "type": "git",
@@ -48,6 +48,14 @@
     "webpack": "^2.3.3"
   },
   "devDependencies": {
-    "jest": "^19.0.2"
+    "babel-eslint": "^7.2.1",
+    "eslint": "^3.19.0",
+    "jest": "^19.0.2",
+    "standard": "^10.0.0",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "env": "jest"
   }
 }

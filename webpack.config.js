@@ -1,10 +1,10 @@
-"use strict"
+'use strict'
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const isCordova = process.env.CORDOVA !== undefined
 
@@ -35,7 +35,7 @@ const optimizePlugins = [
 const plugins = process.env.NODE_ENV === 'production' ? commonPlugins.concat(optimizePlugins) : commonPlugins
 
 module.exports = {
-  context: path.join(__dirname + '/src'),
+  context: path.join(__dirname, 'src'),
   entry: {
     app: ['./main'],
     vendor: ['react', 'react-dom', 'onsenui', 'react-onsenui']
@@ -58,8 +58,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader"
+          fallback: 'style-loader',
+          use: 'css-loader'
         })
       },
       {

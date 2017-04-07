@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import { createStore, applyMiddleware, compose } from 'redux'
-
-import ons from 'onsenui'
-// Onsen UI Styling and Icons
-require('onsenui/css/onsenui.css')
-require('onsenui/css/onsen-css-components.css')
+import { createStore, compose } from 'redux'
 
 import App from './components/App'
 import reducers from './reducers'
+
+import 'onsenui'
+// Onsen UI Styling and Icons
+require('onsenui/css/onsenui.css')
+require('onsenui/css/onsen-css-components.css')
 
 /* CORDOVA ONLY
 document.addEventListener('deviceready', ()=>{
@@ -33,6 +33,6 @@ const rootElement = document.getElementById('app')
 ReactDOM.render(
   <Provider store={store}>
     <App />
-   </Provider>,
+  </Provider>,
   rootElement
 )
