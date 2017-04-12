@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { List, ListItem, Fab, Icon } from 'react-onsenui'
 import { addMessage } from '../actions'
@@ -10,7 +11,6 @@ class MessageList extends React.Component {
   }
 
   onAddClick () {
-    console.log(this)
     ons.notification.prompt({
       cancelable: true,
       title: 'What\'s the message?',

@@ -8,7 +8,7 @@
     "cordova-transpile": "NODE_ENV=production CORDOVA=T webpack",
     "android": "NODE_ENV=development CORDOVA=T webpack && cordova run android",
     "preview": "NODE_ENV=development webpack-dev-server",
-    "test": "standard && jest"
+    "test": "standard && karma start"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/cristovao-trevisan/react-onsenui-minimal#readme",
   "dependencies": {
+    "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-react": "^6.23.0",
@@ -49,13 +50,19 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.2.1",
-    "eslint": "^3.19.0",
-    "jest": "^19.0.2",
+    "jasmine": "^2.5.3",
+    "jquery": "^3.2.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-webpack": "^2.0.3",
     "standard": "^10.0.0",
     "webpack-dev-server": "^2.4.2"
   },
   "standard": {
     "parser": "babel-eslint",
-    "env": "jest"
+    "env": "jasmine",
+    "global": [
+      "spyOn"
+    ]
   }
 }
